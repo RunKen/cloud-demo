@@ -1,0 +1,14 @@
+eureka:
+  server:
+    port: 8501
+  instance:
+    hostname: localhost
+spring:
+  application:
+    name: config
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/RunKen/cloud-demo/cloud-config
+          search-paths: config-repo/*/{application}
