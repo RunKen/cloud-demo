@@ -1,0 +1,15 @@
+server:
+  port: 8000
+eureka:
+  instance:
+    hostname: localhost
+  client:
+      registerWithEureka: false
+      fetchRegistry: false
+      serviceUrl:
+        defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+logging:
+  path: ./logs/eureka
+  common-pattern: '%d{yyyy-MM-dd HH:mm:ss.SSS}:[%5p] [%t:%r] [%C{1}:%M:%L] --> %m%n'
+  level:
+    console: INFO
